@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Lookbook from './pages/Lookbook'
+import Custom from './pages/Custom'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/lookbook" element={<Lookbook />} />
+        <Route path="/custom" element={<Custom />} />
       </Route>
     </Routes>
   )
