@@ -13,10 +13,10 @@ import Reviews from "@/components/site/Reviews";
 import ProductCard from "@/components/site/ProductCard";
 import SectionLabel from "@/components/site/SectionLabel";
 import Reveal from "@/components/ui/reveal";
+import { PRODUCTS } from "@/lib/products";
 
 export default function Home() {
-  // TODO: replace with real product data once backend (Supabase/etc.) is set up
-  const [products, setProducts] = useState([]);
+  const products = PRODUCTS.filter((p) => p.featured).slice(0, 8);
 
   useEffect(() => {
     setSEO({

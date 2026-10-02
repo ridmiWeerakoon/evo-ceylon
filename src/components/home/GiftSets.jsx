@@ -4,6 +4,7 @@ import { money } from "@/lib/media";
 import Reveal from "@/components/ui/reveal";
 import SectionLabel from "@/components/site/SectionLabel";
 import { Gift } from "lucide-react";
+import { PRODUCTS } from "@/lib/products";
 
 const SETS = [
   {
@@ -25,8 +26,7 @@ const SETS = [
 
 export default function GiftSets() {
   const { add } = useCart();
-  // TODO: replace with real product data once backend (Supabase/etc.) is set up
-  const products = [];
+  const products = PRODUCTS;
 
   const resolve = (names) => names.map((n) => products.find((p) => p.name === n)).filter(Boolean);
   const setPrice = (items) => items.reduce((s, p) => s + (p.price || 0), 0);
