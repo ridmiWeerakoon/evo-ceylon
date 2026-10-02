@@ -5,6 +5,8 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Lookbook from './pages/Lookbook'
 import Custom from './pages/Custom'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/lookbook" element={<Lookbook />} />
         <Route path="/custom" element={<Custom />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Route>
     </Routes>
   )
